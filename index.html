@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
-   
+   <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+
    <title>Day Trip Planner</title>
 </head>
+
 <body>
    <div class="header">
       <h1>Day Trip Planner</h1>
-      <div class='logo'><img src="./images/day-trip-logo2.png"/></div>
+      <div class='logo'><img src="./images/day-trip-logo2.png" /></div>
    </div>
-   <div class="wrapper">
-      <p>This tool is useful for people living in the New York, Philadelphia, New Jersey or Washington, DC vicinity. Use to generate a random day trip containing the destination, restaurant, mode of transportation and entertainment.</p>
-      <div>
-         <button class='butTrip' onclick="generateDayTrip()">Generate Trip</button>
+   <class="wrapper">
+      <p>This tool is useful for people living in the New York, Philadelphia,
+         New Jersey or Washington, DC vicinity. Use to generate a random day
+         trip containing the destination, restaurant, mode of transportation and
+         entertainment.</p>
+      <div id="generate">
+         <button class='butGenerateTrip' name='generateTrip' type="submit" value='generateTrip'>Generate Trip</button>
+         <div id="trip"></div>
       </div>
-      <div id="trip">
-         
-      </div>
-   </div>
-   <script src="index.js"></script>
+
+      <div id='actionButtons' class="buttons hide">
+         <div class="action_btn">
+         <button name="submit" class="action_btn submit" type="submit" value="keep">Keep</button>&nbsp;&nbsp;
+         <button name="submit" class="action_btn cancel" type="submit" value="discard">Discard</button>
+         </div>
+         <div id="response"></div>
+     </div>
+      <script src="index.js"></script>
 
 
 </body>
+
 </html>
