@@ -5,11 +5,10 @@
 
 "use strict";
 /* The code below could be refactored to use one function instead of five to generate trip details */
-
-
-
+const elementID = document.getElementById;
 // generate day trip
 function generateDayTrip() {
+   
    // select trip details
    const dest = selectDestination();
    const restuarant = selectRestaurant();
@@ -22,25 +21,25 @@ function generateDayTrip() {
 
    // display trip results in browser
    document.getElementById("trip").innerHTML = html;
-
+   // console log trip details
    console.log('Destination: ', dest, 'Restaurant: ', restuarant, 'Transportation: ', transport, 'Entertainment: ', entertain);
 }
 
 // select trip destination
 function selectDestination() {
-   const arr = ["Annapolis, Maryland",'New York City', "Ocean City, New Jersey", "Philadelphia", "Washington, DC", "Cherry Hill, New Jersey", "Rehobeth Beach, Delaware"]
+   const arr = ["Annapolis, Maryland", 'New York City', "Ocean City, New Jersey", "Philadelphia", "Washington, DC", "Cherry Hill, New Jersey", "Rehobeth Beach, Delaware"]
    return arr[selRandomItem(arr)];
 }
 
 // select trip restaurant
 function selectRestaurant() {
-   const arr = ['Ruth Chris Steakhouse', 'Ben & Bonz Barbecue', 'True Thai Crusine', "Nature's Treats Dining Extravaganza", "Aunt Lula's Southern Style Cooking","Emeril's Food Festival"]
+   const arr = ['Ruth Chris Steakhouse', 'Ben & Bonz Barbecue', 'True Thai Crusine', "Nature's Treats Dining Extravaganza", "Aunt Lula's Southern Style Cooking", "Emeril's Food Festival", "Food Lover's Palace","Steaks and More","Texas Roadhouse","Longhorn Steakhouse"]
    return arr[selRandomItem(arr)];
 }
 
 // select trip transport mode
 function selectTransportMode() {
-   const arr = ['private vehicle', 'bus', 'Amtrak', 'Uber', 'Lyft'];
+   const arr = ['Private Vehicle', 'Bus', 'Amtrak', 'Uber', 'Lyft','Chartered Jet','Commercial Airlines'];
    return arr[selRandomItem(arr)];
 }
 
@@ -68,12 +67,10 @@ document.addEventListener('click', (e) => {
       window.location.reload();
 
    } else if (e.target.value === 'keep') {
-      document.getElementById('actionButtons').classList.add('hide');
-      document.getElementById('response').innerHTML = "<h4 style='width: 300px;'>Congratulations! Nice choice. Enjoy your trip...</h4>";
-
+      document.getElementById('actionButtons').innerHTML = "<h4 style='width: 300px;'>Congratulations! Nice choice. Enjoy your trip...</h4>";
+      document.getElementById('actionButtons').classList.add('fade-out');
       // wait to clear message from screen
       setTimeout(() => {
-         document.getElementById('response').innerHTML = "";
          window.location.reload();
       }, 4000);
    }

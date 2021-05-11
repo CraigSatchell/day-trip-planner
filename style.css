@@ -22,6 +22,8 @@ p {
 div ul li {
   margin: 0 auto;
   display: flex;
+  color: #999999;
+  font-weight: 500;
   list-style: none;
   text-align: left;
 }
@@ -32,6 +34,7 @@ div li span {
   flex-direction: column;
   font-size: 1rem;
   font-weight: 900;
+  color: #336699;
   text-align: right;
 }
 
@@ -76,6 +79,13 @@ div li span {
   visibility: hidden;
 }
 
+.fade-out {
+  transition-delay: 3s;
+  transition-duration: 1.3s;
+  opacity: 0;
+}
+
+
 button:hover {
   cursor: pointer;
   font-weight: bolder;
@@ -109,8 +119,3 @@ button {
   justify-content: center;
 }
 
-#response {
-   width: 200px;
-   margin: 0 auto;
-   color: #336699;
-}
