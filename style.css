@@ -9,8 +9,7 @@
 h1 {
    text-align: center;
    padding: 25px;
-   background: #336699;
-   color: #ffffff;
+
 }
 
 p { 
@@ -19,8 +18,22 @@ p {
    display: block;
    margin: 0 auto;
    text-align: left;
+   color: #000000;
 }
 
+.header {
+   background: #336699;
+   color: #ffffff;
+   padding: 0;
+}
+
+.logo {
+   position: absolute;
+   padding-top: 10px;
+   top: 0;
+   left: 0;
+
+}
 .wrapper {
    padding: 50px;
    }
