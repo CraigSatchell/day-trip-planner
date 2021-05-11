@@ -51,6 +51,7 @@ function selectEntertainment() {
    return arr[selRandomItem(arr)];
 }
 
+// return index of random item
 function selRandomItem(arr) {
    let itemIndex = Math.floor(Math.random() * arr.length);
    return itemIndex;
@@ -58,7 +59,6 @@ function selRandomItem(arr) {
 
 // listen for click events
 document.addEventListener('click', (e) => {
-
    if (e.target.value === 'generateTrip') {
       console.log(e.target.value);
       generateDayTrip();
@@ -68,11 +68,13 @@ document.addEventListener('click', (e) => {
       window.location.reload();
 
    } else if (e.target.value === 'keep') {
+      document.getElementById('actionButtons').classList.add('hide');
       document.getElementById('response').innerHTML = "<h4 style='width: 300px;'>Congratulations! Nice choice. Enjoy your trip...</h4>";
+
       // wait to clear message from screen
       setTimeout(() => {
          document.getElementById('response').innerHTML = "";
          window.location.reload();
-      }, 5000);
+      }, 4000);
    }
 }, false);
