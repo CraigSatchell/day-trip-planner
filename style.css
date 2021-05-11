@@ -4,6 +4,9 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
 }
+body {
+  background: #dbdadaf4;
+}
 
 h1 {
   text-align: center;
@@ -22,14 +25,14 @@ p {
 div ul li {
   margin: 0 auto;
   display: flex;
-  color: #999999;
+  color: #000000;
   font-weight: 500;
   list-style: none;
   text-align: left;
 }
 
 div li span {
-  width: 300px;
+  width: 225px;
   display: flex;
   flex-direction: column;
   font-size: 1rem;
@@ -91,13 +94,14 @@ button:hover {
   font-weight: bolder;
   background: #336699;
   color: #ffffff;
+  border-color: #336699;
 }
 
 button {
   display: block;
-  border: 2px solid #336699;
-  background: #ffffff;
-  color: #336699;
+  border: 2px solid #00BFF3;
+  background: #00BFF3;
+  color: #000000;
   font-style: bold;
   font-size: 1rem;
   margin: 0 auto;
