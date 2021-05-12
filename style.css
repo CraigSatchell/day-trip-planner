@@ -91,7 +91,6 @@ div li span {
 
 button:hover {
   cursor: pointer;
-  font-weight: bolder;
   background: #336699;
   color: #ffffff;
   border-color: #336699;
@@ -102,7 +101,7 @@ button {
   border: 2px solid #00BFF3;
   background: #00BFF3;
   color: #000000;
-  font-style: bold;
+  font-weight: bolder;
   font-size: 1rem;
   margin: 0 auto;
   border-radius: 20px;

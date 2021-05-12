@@ -8,7 +8,7 @@
 const elementID = document.getElementById;
 // generate day trip
 function generateDayTrip() {
-   
+
    // select trip details
    const dest = selectDestination();
    const restuarant = selectRestaurant();
@@ -17,7 +17,7 @@ function generateDayTrip() {
 
 
    // results template string
-   const html = "<div class='tripDetails'><ul><li><span>Destination:</span>&nbsp;&nbsp;" + dest + "</li><li><span>Restaurant:</span>&nbsp;&nbsp;" + restuarant + "</li><li><span>Travel Mode:</span>&nbsp;&nbsp;" + transport + "</li><li><span>Entertainment:</span>&nbsp;&nbsp;" + entertain + "</li></li></ul></div>"
+   const html = `<div class='tripDetails'><ul><li><span>Destination:</span>&nbsp;&nbsp;${dest}</li><li><span>Restaurant:</span>&nbsp;&nbsp;${restuarant}</li><li><span>Travel Mode:</span>&nbsp;&nbsp;${transport}</li><li><span>Entertainment:</span>&nbsp;&nbsp;${entertain}</li></li></ul></div>`
 
    // display trip results in browser
    document.getElementById("trip").innerHTML = html;
@@ -27,26 +27,26 @@ function generateDayTrip() {
 
 // select trip destination
 function selectDestination() {
-   const arr = ["Annapolis, Maryland", 'New York City', "Ocean City, New Jersey", "Philadelphia", "Washington, DC", "Cherry Hill, New Jersey", "Rehobeth Beach, Delaware"]
+   const arr = ["Annapolis", 'New York City', "Ocean City, Maryland", "Philadelphia", "Washington, DC", "Cherry Hill, New Jersey", "Rehobeth Beach", 'Baltimore']
    return arr[selRandomItem(arr)];
 }
 
 // select trip restaurant
 function selectRestaurant() {
-   const arr = ['Ruth Chris Steakhouse', 'Ben & Bonz Barbecue', 'True Thai Crusine', "Nature's Treats Dining Extravaganza", "Aunt Lula's Southern Style Cooking", "Emeril's Food Festival", "Food Lover's Palace","Steaks and More","Texas Roadhouse","Longhorn Steakhouse"]
+   const arr = ['Ruth Chris Steakhouse', 'Ben & Bonz Barbecue', 'True Thai Crusine', "Nature's Treats Dining Extravaganza", "Aunt Lula's Southern Style Cooking", "Emeril's Food Festival", "Food Lover's Palace", "Steaks and More", "Texas Roadhouse", "Longhorn Steakhouse"]
    return arr[selRandomItem(arr)];
 }
 
 // select trip transport mode
 function selectTransportMode() {
-   const arr = ['Private Vehicle', 'Bus', 'Amtrak', 'Uber', 'Lyft','Chartered Jet','Commercial Airlines'];
+   const arr = ['Private Vehicle', 'Bus', 'Amtrak', 'Uber', 'Lyft', 'Chartered Jet', 'Commercial Airlines'];
    return arr[selRandomItem(arr)];
 }
 
 
 // select trip enterainment
 function selectEntertainment() {
-   const arr = ['movie', 'live musical', 'live play', 'jazz bar', 'night club'];
+   const arr = ['movie', 'live musical', 'live play', 'jazz bar', 'night club', 'casino', 'music festival', 'NBA game', 'MLB game', 'live horse racing'];
    return arr[selRandomItem(arr)];
 }
 
