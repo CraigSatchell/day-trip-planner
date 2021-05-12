@@ -5,7 +5,7 @@
 
 "use strict";
 /* The code below could be refactored to use one function instead of five to generate trip details */
-const elementID = document.getElementById;
+
 // generate day trip
 function generateDayTrip() {
    
@@ -17,7 +17,8 @@ function generateDayTrip() {
 
 
    // results template string
-   const html = "<div class='tripDetails'><ul><li><span>Destination:</span>&nbsp;&nbsp;" + dest + "</li><li><span>Restaurant:</span>&nbsp;&nbsp;" + restuarant + "</li><li><span>Travel Mode:</span>&nbsp;&nbsp;" + transport + "</li><li><span>Entertainment:</span>&nbsp;&nbsp;" + entertain + "</li></li></ul></div>"
+   const html = `<div class='tripDetails'><ul><li><span>Destination:</span>&nbsp;&nbsp;${dest}</li><li><span>Restaurant:</span>&nbsp;&nbsp;${restuarant}</li><li><span>Travel Mode:</span>&nbsp;&nbsp;${transport}</li><li><span>Entertainment:</span>&nbsp;&nbsp;${entertain}</li></li></ul></div>`
+
 
    // display trip results in browser
    document.getElementById("trip").innerHTML = html;

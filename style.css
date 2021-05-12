@@ -85,10 +85,8 @@ div li span {
   opacity: 0;
 }
 
-
 button:hover {
   cursor: pointer;
-  font-weight: bolder;
   background: #336699;
   color: #ffffff;
 }
@@ -98,7 +96,7 @@ button {
   border: 2px solid #336699;
   background: #ffffff;
   color: #336699;
-  font-style: bold;
+  font-weight: bolder;
   font-size: 1rem;
   margin: 0 auto;
   border-radius: 20px;
@@ -118,4 +116,3 @@ button {
   display: flex;
   justify-content: center;
 }
-
